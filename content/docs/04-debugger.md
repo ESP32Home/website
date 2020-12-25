@@ -3,6 +3,7 @@ title: "JTAG Debugger"
 description: "How to step debug"
 date: 2020-12-25T00:00:00+09:00
 draft: false
+weight: 4
 ---
 
 ## PlatformIO
