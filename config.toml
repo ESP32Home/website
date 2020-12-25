@@ -1,0 +1,4 @@
+baseURL = "https://esp32home.github.io/"
+languageCode = "en-us"
+title = "ESP32 Home"
+theme = "zdoc"

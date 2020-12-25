@@ -1,0 +1,11 @@
+[[main]]
+  identifier = "docs"
+  name = "Docs"
+  url = "docs"
+  weight = 1
+
+[[main]]
+  identifier = "boards"
+  name = "Boards"
+  url = "boards"
+  weight = 2
