@@ -1,3 +1,7 @@
 [submodule "themes/zdoc"]
 	path = themes/zdoc
 	url = https://github.com/zzossig/hugo-theme-zdoc.git
+[submodule "public"]
+	path = public
+	url = https://github.com/ESP32Home/esp32home.github.io.git
+	branch = main
