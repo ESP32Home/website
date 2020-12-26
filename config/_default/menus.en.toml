@@ -2,10 +2,10 @@
   identifier = "docs"
   name = "Docs"
   url = "docs"
-  weight = 1
+  weight = 2
 
 [[main]]
   identifier = "boards"
   name = "Boards"
   url = "boards"
-  weight = 2
+  weight = 1

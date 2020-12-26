@@ -41,6 +41,8 @@ header:
 
 | Link        | Board           |
 |:-------------:| ------------- |
-| [ttgo_t-display](/boards/01-ttgo-t-display)      | ![img](/images/ttgo_t-display.png) |
-| [ttgo_t5-epaper](/boards/02-ttgo-t5-epaper)      | ![img](/images/ttgo_t5-epaper.png) |
+| [ttgo_t-display](/boards/ttgo-t-display)      | ![img](/images/ttgo_t-display-s.png) |
+| [m5 stick C Plus](/boards/m5stick-plus)      | ![img](/images/m5_stick_plus.png) |
+| [Fisheye Cam OV3660](/boards/fisheye-cam-ov36)      | ![img](/images/fisheye-cam-ov36.png) |
+| [ttgo_t5-epaper](/boards/ttgo-t5-epaper)      | ![img](/images/ttgo_t5-epaper-s.png) |
 

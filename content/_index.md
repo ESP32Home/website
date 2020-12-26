@@ -15,8 +15,11 @@ landing:
   textColor:
   spaceBetweenTitleText: 25
   buttons:
+    - link: boards
+      text: Boards
+      color: primary
     - link: docs
-      text: Documentation
+      text: Docs
       color: primary
   # backgroundImage: 
   #   src: images/landscape.jpg
