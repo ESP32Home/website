@@ -7,57 +7,53 @@ weight: 2
 ---
 ![img](/images/ttgo_t5-epaper.png)
 
-
-## Simple Example
-* [t-display_controller](https://github.com/ESP32Home/t-display_controller)
+## Simple example
+* [epaper-TTGO-T5_1_2-hello](https://github.com/ESP32Home/epaper-TTGO-T5_1_2-hello)
 
 ### dependencies
-* [TFT_eSPI_ttgo_t-display](https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display)
-    * fork from [Bodmer/TFT_eSPI](https://github.com/Bodmer/TFT_eSPI)
-* [GfxUi](https://github.com/ESP32Home/GfxUi)
+* [GxEPD](https://github.com/ZinggJM/GxEPD)
 
 ```ini
-lib_deps =    
-    https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display.git#2.3.4_t-display
-    https://github.com/ESP32Home/GfxUi.git#v1.0.1
+lib_ldf_mode = deep+
+lib_deps =
+    GxEPD@3.1.0
 ```
+
 ### Example
 ```c++
-#include <Arduino.h>
-#include <TFT_eSPI.h>
-#include <SPI.h>
-#include "GfxUi.h"
 #include <SPIFFS.h>
+#include <epaper.h>
 
-TFT_eSPI tft = TFT_eSPI(135, 240);
-GfxUi ui = GfxUi(&tft);
+EPaper epaper;
 
 void setup()
 {
     Serial.begin(115200);
+    SPIFFS.begin();
 
-    tft.init();
-    tft.setRotation(3);
-    SPIFFS.begin(true);//FORMAT_SPIFFS_IF_FAILED
-    ui.drawBmp("/esp_home.bmp", 0, 0);//'ui' needs tft and SPIFF
-
-    tft.setCursor(0, 0);
-    tft.setTextColor(TFT_GREEN);
-    tft.setTextSize(2);
-    tft.drawString("Hello TFT World",  tft.width() / 2, tft.height() / 2 );
+    epaper.init();
+    epaper.display.fillScreen(GxEPD_WHITE);
+    epaper.drawBitmap("/esp_home.bmp", 0, 50, true);
+    epaper.displayText("Hello simple", 20, EPaper::RIGHT_ALIGNMENT);
+    epaper.display.update();
 
 }
 
 void loop()
 {
-
 }
 ```
-
 ## Display
-* IPS ST7789V
-* 1,14 Zoll
-* 135x240
+* GxGDEW029Z10
+* 2,9 Zoll
+* White / Black / Red
+* 296x128
 
+## References
+* LilyGo epaper ESP-IDF repo [LilyGO/ESP32_T5Epaper_2.9inch](https://github.com/LilyGO/ESP32_T5Epaper_2.9inch)
+    * fork from [loboris/ESP32_ePaper_example](https://github.com/loboris/ESP32_ePaper_example) 
+* LilyGo epaper platformio-arduino repo [Xinyuan-LilyGO/T5-Ink-Screen-Series](https://github.com/Xinyuan-LilyGO/T5-Ink-Screen-Series)
+    * fork from [TTGO-EPaper-Series](https://github.com/lewisxhe/TTGO-EPaper-Series)
+* Waveshare specification pdf [2.9inch_e-Paper_Datasheet.pdf](https://github.com/LilyGO/ESP32_T5Epaper_2.9inch/blob/master/Documents/2.9inch_e-Paper_Datasheet.pdf)
 ## Suppliers
-* [Aliexpress ~ 10€](https://de.aliexpress.com/item/4000829894292.html?spm=a2g0s.9042311.0.0.33794c4dbkKB4T)
+* [Aliexpress ~ 20€](https://de.aliexpress.com/item/32854552241.html?spm=a2g0s.9042311.0.0.27424c4djfgWXd)
