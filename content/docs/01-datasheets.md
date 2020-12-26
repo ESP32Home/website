@@ -28,4 +28,18 @@ weight: 1
 
 ## ESP32-S2
 
+### Datasheet
 * [ESP32-S2 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf)
+
+#### Block Diagram
+![img](/images/esp32-s2_block_diagram.png)
+
+#### Memory
+![img](/images/esp32-s2_mem.png)
+
+#### Power Modes
+![img](/images/esp32-s2_power_modes.png)
+
+### S2 Technical Reference Manual
+* [TRM](https://www.espressif.com/sites/default/files/documentation/esp32-s2_technical_reference_manual_en.pdf)
+
